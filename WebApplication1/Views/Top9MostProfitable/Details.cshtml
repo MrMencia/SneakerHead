@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.Top9MostProfitable
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Top9MostProfitable</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.SneakerName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SneakerName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RetailValue)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RetailValue)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ResaleValue)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ResaleValue)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ValueIncrease)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ValueIncrease)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

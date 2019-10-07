@@ -1,0 +1,14 @@
+﻿@{
+    if (this.User.IsInRole("SneakerBUYER"))
+    {
+        Layout = "~/Views/Shared/_LayoutSneakerBUYER.cshtml";
+    }
+    else if (this.User.IsInRole("sneakerSELLER"))
+    {
+        Layout = "~/Views/Shared/_LayoutSneakerSELLER.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}

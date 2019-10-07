@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7114C7F6-CE8F-4DA7-AC7B-BD4C0C003236}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44329</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaveReviewsController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProjectedResaleValueChartController.cs" />
+    <Compile Include="Controllers\ShoesForSaleController.cs" />
+    <Compile Include="Controllers\SneakerBuyerController.cs" />
+    <Compile Include="Controllers\SneakerSellerController.cs" />
+    <Compile Include="Controllers\Top9MostProfitableController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909261503530_InitialCreate.cs" />
+    <Compile Include="Migrations\201909261503530_InitialCreate.Designer.cs">
+      <DependentUpon>201909261503530_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909261654374_Migration1, built models, created page fields,created roles.cs" />
+    <Compile Include="Migrations\201909261654374_Migration1, built models, created page fields,created roles.Designer.cs">
+      <DependentUpon>201909261654374_Migration1, built models, created page fields,created roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910011448266_created top9mostprofitable sneakers model and view.cs" />
+    <Compile Include="Migrations\201910011448266_created top9mostprofitable sneakers model and view.Designer.cs">
+      <DependentUpon>201910011448266_created top9mostprofitable sneakers model and view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910011450094_corrected index model for top9mostprofitable.cs" />
+    <Compile Include="Migrations\201910011450094_corrected index model for top9mostprofitable.Designer.cs">
+      <DependentUpon>201910011450094_corrected index model for top9mostprofitable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910011457034_Test.cs" />
+    <Compile Include="Migrations\201910011457034_Test.Designer.cs">
+      <DependentUpon>201910011457034_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910021722087_Test2.cs" />
+    <Compile Include="Migrations\201910021722087_Test2.Designer.cs">
+      <DependentUpon>201910021722087_Test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910021742508_Test4.cs" />
+    <Compile Include="Migrations\201910021742508_Test4.Designer.cs">
+      <DependentUpon>201910021742508_Test4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910021835020_test5.cs" />
+    <Compile Include="Migrations\201910021835020_test5.Designer.cs">
+      <DependentUpon>201910021835020_test5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910021853589_thing.cs" />
+    <Compile Include="Migrations\201910021853589_thing.Designer.cs">
+      <DependentUpon>201910021853589_thing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910021929536_testing5.cs" />
+    <Compile Include="Migrations\201910021929536_testing5.Designer.cs">
+      <DependentUpon>201910021929536_testing5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910030438468_TEsting7.cs" />
+    <Compile Include="Migrations\201910030438468_TEsting7.Designer.cs">
+      <DependentUpon>201910030438468_TEsting7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910031351362_Test7.cs" />
+    <Compile Include="Migrations\201910031351362_Test7.Designer.cs">
+      <DependentUpon>201910031351362_Test7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910031456141_test8.cs" />
+    <Compile Include="Migrations\201910031456141_test8.Designer.cs">
+      <DependentUpon>201910031456141_test8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910031619577_test10.cs" />
+    <Compile Include="Migrations\201910031619577_test10.Designer.cs">
+      <DependentUpon>201910031619577_test10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910031853372_changed name in ProjectedResaleValueChart model class.cs" />
+    <Compile Include="Migrations\201910031853372_changed name in ProjectedResaleValueChart model class.Designer.cs">
+      <DependentUpon>201910031853372_changed name in ProjectedResaleValueChart model class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910031912515_Removed shoe preowned condition from projected resale chart model.cs" />
+    <Compile Include="Migrations\201910031912515_Removed shoe preowned condition from projected resale chart model.Designer.cs">
+      <DependentUpon>201910031912515_Removed shoe preowned condition from projected resale chart model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910041947537_Added Reviews Model and view.cs" />
+    <Compile Include="Migrations\201910041947537_Added Reviews Model and view.Designer.cs">
+      <DependentUpon>201910041947537_Added Reviews Model and view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910060017270_Testing11.cs" />
+    <Compile Include="Migrations\201910060017270_Testing11.Designer.cs">
+      <DependentUpon>201910060017270_Testing11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910060111307_added rating to leave reviews model.cs" />
+    <Compile Include="Migrations\201910060111307_added rating to leave reviews model.Designer.cs">
+      <DependentUpon>201910060111307_added rating to leave reviews model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910060248491_added shoe price field to shoe store.cs" />
+    <Compile Include="Migrations\201910060248491_added shoe price field to shoe store.Designer.cs">
+      <DependentUpon>201910060248491_added shoe price field to shoe store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910071342209_putting everything together.cs" />
+    <Compile Include="Migrations\201910071342209_putting everything together.Designer.cs">
+      <DependentUpon>201910071342209_putting everything together.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910071357586_tweaks bfore presentation.cs" />
+    <Compile Include="Migrations\201910071357586_tweaks bfore presentation.Designer.cs">
+      <DependentUpon>201910071357586_tweaks bfore presentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910071509368_Everything together.cs" />
+    <Compile Include="Migrations\201910071509368_Everything together.Designer.cs">
+      <DependentUpon>201910071509368_Everything together.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910071518388_Everything.cs" />
+    <Compile Include="Migrations\201910071518388_Everything.Designer.cs">
+      <DependentUpon>201910071518388_Everything.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LeaveReviews.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProjectedResaleValueChart.cs" />
+    <Compile Include="Models\ShoesForSale.cs" />
+    <Compile Include="Models\SneakerBuyer.cs" />
+    <Compile Include="Models\SneakerSeller.cs" />
+    <Compile Include="Models\Top9MostProfitable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\1539230173.jpg" />
+    <Content Include="Content\1a96eda28f8dce6d5dcd770f4a29a618.png" />
+    <Content Include="Content\33-334408_quote-each-sneaker-sneakerhead-wallpaper-iphone-6.jpg" />
+    <Content Include="Content\33-334474_wallpaper-sneakers-pile-of-hype-sneakers.jpg" />
+    <Content Include="Content\4673758cf4f04cf6ef9ea422c3285872.jpg" />
+    <Content Include="Content\62e1b0b90fba0a250b9b828c365149b9.jpg" />
+    <Content Include="Content\bootstrap- LUX.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CircularBackground.jpg" />
+    <Content Include="Content\edc50b62a5e102a9f316e313765f4a83.jpg" />
+    <Content Include="Content\future-reselling-middle.mp4" />
+    <Content Include="Content\il_794xN.1062596634_7rnd.jpg" />
+    <Content Include="Content\il_794xN.1280875099_a4qv.jpg" />
+    <Content Include="Content\il_794xN.1392117866_82yo.jpg" />
+    <Content Include="Content\il_794xN.1563564280_n89g.jpg" />
+    <Content Include="Content\il_794xN.1773858352_d0c6.jpg" />
+    <Content Include="Content\il_794xN.1866100117_e1ht.jpg" />
+    <Content Include="Content\il_fullxfull.1109540883_xg3y.jpg" />
+    <Content Include="Content\il_fullxfull.1241397807_ewqm.jpg" />
+    <Content Include="Content\Jordan6Infrared.jpg" />
+    <Content Include="Content\KissMyAirs.jpg" />
+    <Content Include="Content\michael-jordan-shoes-wallpaper.jpg" />
+    <Content Include="Content\organize-1000x580.jpg" />
+    <Content Include="Content\ShoeBoxesStacked.jpg" />
+    <Content Include="Content\SneakerHeadCloset.jpg" />
+    <Content Include="Content\SneakerHeadCloset3.jpg" />
+    <Content Include="Content\SneakerHeadClosetCOLORFUL.jpg" />
+    <Content Include="Content\SneakerHEADlogo.jpg" />
+    <Content Include="Content\sxd7y7zzpkyqjhi6ebut.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Shoe.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\SneakerBuyer\Create.cshtml" />
+    <Content Include="Views\SneakerBuyer\Edit.cshtml" />
+    <Content Include="Views\SneakerBuyer\Delete.cshtml" />
+    <Content Include="Views\SneakerBuyer\Details.cshtml" />
+    <Content Include="Views\SneakerSeller\Create.cshtml" />
+    <Content Include="Views\SneakerSeller\Details.cshtml" />
+    <Content Include="Views\SneakerSeller\Edit.cshtml" />
+    <Content Include="Views\Shared\_LayoutSneakerBUYER.cshtml" />
+    <Content Include="Views\SneakerBuyer\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutSneakerSELLER.cshtml" />
+    <Content Include="Views\Top9MostProfitable\Index.cshtml" />
+    <Content Include="Views\Top9MostProfitable\Edit.cshtml" />
+    <Content Include="Views\Top9MostProfitable\Create.cshtml" />
+    <Content Include="Views\Top9MostProfitable\Details.cshtml" />
+    <Content Include="Views\ShoesForSale\Edit.cshtml" />
+    <Content Include="Views\ShoesForSale\Details.cshtml" />
+    <Content Include="Views\ShoesForSale\Create.cshtml" />
+    <Content Include="Views\ShoesForSale\Index.cshtml" />
+    <Content Include="Views\ProjectedResaleValueChart\Index.cshtml" />
+    <Content Include="Views\ProjectedResaleValueChart\Create.cshtml" />
+    <Content Include="Views\ProjectedResaleValueChart\GenerateResaleValue.cshtml" />
+    <Content Include="Views\LeaveReviews.cshtml" />
+    <Content Include="Views\LeaveReviews\Create.cshtml" />
+    <Content Include="Views\LeaveReviews\Edit.cshtml" />
+    <Content Include="Views\LeaveReviews\Index.cshtml" />
+    <Content Include="Views\LeaveReviews\Delete.cshtml" />
+    <Content Include="Views\SneakerSeller\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201909261503530_InitialCreate.resx">
+      <DependentUpon>201909261503530_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909261654374_Migration1, built models, created page fields,created roles.resx">
+      <DependentUpon>201909261654374_Migration1, built models, created page fields,created roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910011448266_created top9mostprofitable sneakers model and view.resx">
+      <DependentUpon>201910011448266_created top9mostprofitable sneakers model and view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910011450094_corrected index model for top9mostprofitable.resx">
+      <DependentUpon>201910011450094_corrected index model for top9mostprofitable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910011457034_Test.resx">
+      <DependentUpon>201910011457034_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910021722087_Test2.resx">
+      <DependentUpon>201910021722087_Test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910021742508_Test4.resx">
+      <DependentUpon>201910021742508_Test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910021835020_test5.resx">
+      <DependentUpon>201910021835020_test5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910021853589_thing.resx">
+      <DependentUpon>201910021853589_thing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910021929536_testing5.resx">
+      <DependentUpon>201910021929536_testing5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910030438468_TEsting7.resx">
+      <DependentUpon>201910030438468_TEsting7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031351362_Test7.resx">
+      <DependentUpon>201910031351362_Test7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031456141_test8.resx">
+      <DependentUpon>201910031456141_test8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031619577_test10.resx">
+      <DependentUpon>201910031619577_test10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031853372_changed name in ProjectedResaleValueChart model class.resx">
+      <DependentUpon>201910031853372_changed name in ProjectedResaleValueChart model class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910031912515_Removed shoe preowned condition from projected resale chart model.resx">
+      <DependentUpon>201910031912515_Removed shoe preowned condition from projected resale chart model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910041947537_Added Reviews Model and view.resx">
+      <DependentUpon>201910041947537_Added Reviews Model and view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910060017270_Testing11.resx">
+      <DependentUpon>201910060017270_Testing11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910060111307_added rating to leave reviews model.resx">
+      <DependentUpon>201910060111307_added rating to leave reviews model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910060248491_added shoe price field to shoe store.resx">
+      <DependentUpon>201910060248491_added shoe price field to shoe store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910071342209_putting everything together.resx">
+      <DependentUpon>201910071342209_putting everything together.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910071357586_tweaks bfore presentation.resx">
+      <DependentUpon>201910071357586_tweaks bfore presentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910071509368_Everything together.resx">
+      <DependentUpon>201910071509368_Everything together.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910071518388_Everything.resx">
+      <DependentUpon>201910071518388_Everything.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62967</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
