@@ -19,8 +19,8 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44329</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -275,6 +275,10 @@
     <Compile Include="Migrations\201910071518388_Everything.Designer.cs">
       <DependentUpon>201910071518388_Everything.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910181551450_After dowloadg project.cs" />
+    <Compile Include="Migrations\201910181551450_After dowloadg project.Designer.cs">
+      <DependentUpon>201910181551450_After dowloadg project.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -491,6 +495,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910071518388_Everything.resx">
       <DependentUpon>201910071518388_Everything.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910181551450_After dowloadg project.resx">
+      <DependentUpon>201910181551450_After dowloadg project.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
