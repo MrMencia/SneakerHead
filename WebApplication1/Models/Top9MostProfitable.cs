@@ -19,7 +19,7 @@ namespace WebApplication1.Models
         public string RetailValue { get; set; }
 
 
-        [Display(Name = "Estimated Retail Value")]
+        [Display(Name = "Estimated Resale Value")]
         public string ResaleValue { get; set; }
 
 
