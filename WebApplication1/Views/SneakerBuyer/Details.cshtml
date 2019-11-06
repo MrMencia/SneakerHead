@@ -19,7 +19,7 @@
             font: 400 19px Lato, sans-serif, bolder;
             line-height: 1.8;
             color: #d41515;
-            background-image: url('../../Content/il_fullxfull.1109540883_xg3y.jpg');
+            background-image: url('../../Content/il_794xN.1563564280_n89g.jpg');
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -35,7 +35,7 @@
         h4 {
             font-size: 19px;
             line-height: 1.375em;
-            color: #303030;
+            color: #d41515;
             font-weight: 400;
             margin-bottom: 30px;
         }
@@ -257,7 +257,7 @@
     <h2>Details</h2>
 
     <div>
-        <h4>SneakerBuyer</h4>
+        <h4>SneakerBuyer Info: </h4>
         <hr />
         <dl class="dl-horizontal">
             <dt>
@@ -313,7 +313,8 @@
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-        @Html.ActionLink("Nothing to Edit, Go to Profile!", "Index", new { id = Model.Id })
+        @Html.ActionLink("Edit Info", "Edit", new { id = Model.Id })
+        <br />
+        @Html.ActionLink("Everything is Correct, Go to Profile!", "Index", new { id = Model.Id })
 
     </p>

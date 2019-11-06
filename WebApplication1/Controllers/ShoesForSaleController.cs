@@ -20,12 +20,14 @@ namespace WebApplication1.Controllers
             return View(shoesForSales);
         }
 
+
         // GET: ShoesForSale/Details/5 (Done)
         public ActionResult Details(int id)
         {
             ShoesForSale shoesForSale = context.ZapatosParaVenda.Where(z => z.Id == id).Single();
             return View(shoesForSale);
         }
+
 
         // GET: ShoesForSale/Create (DONE)
         public ActionResult Create()
@@ -34,6 +36,8 @@ namespace WebApplication1.Controllers
 
             return View(shoesForSale);
         }
+
+
 
         // POST: ShoesForSale/Create (Done)
         [HttpPost]
@@ -51,6 +55,8 @@ namespace WebApplication1.Controllers
             return View(shoesForSale);
         }
 
+
+
         // GET: ShoesForSale/Edit/5 (DONE)
         public ActionResult Edit(int id)
         {
@@ -63,6 +69,8 @@ namespace WebApplication1.Controllers
 
             
         }
+
+
 
         // POST: ShoesForSale/Edit/5 (Done)
         [HttpPost]
@@ -85,6 +93,7 @@ namespace WebApplication1.Controllers
                 return View();
             }
         }
+
 
         // GET: ShoesForSale/Delete/5 (Done)
         public ActionResult Delete(int id)

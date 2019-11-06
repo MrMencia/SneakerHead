@@ -19,7 +19,7 @@
             font: 400 19px Lato, sans-serif, bolder;
             line-height: 1.8;
             color: #d41515;
-            background-image: url('../../Content/il_fullxfull.1109540883_xg3y.jpg');
+            background-image: url('../../Content/il_794xN.1563564280_n89g.jpg');
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -35,7 +35,7 @@
         h4 {
             font-size: 19px;
             line-height: 1.375em;
-            color: #303030;
+            color: #fff;
             font-weight: 400;
             margin-bottom: 30px;
         }
@@ -259,7 +259,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>SneakerBuyer</h4>
+            <h4> Edit Info: </h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.Id)

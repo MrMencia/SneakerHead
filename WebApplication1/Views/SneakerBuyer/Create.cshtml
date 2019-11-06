@@ -35,7 +35,7 @@
         h4 {
             font-size: 19px;
             line-height: 1.375em;
-            color: #303030;
+            color: #fff;
             font-weight: 400;
             margin-bottom: 30px;
         }
@@ -254,7 +254,7 @@
 
 
 
-    <h2>Create</h2>
+    <h2>Enter Your Profile Info:</h2>
 
 
     @using (Html.BeginForm())
@@ -262,7 +262,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>SneakerBuyer</h4>
+            <h4>Enter Your Information Below:</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">

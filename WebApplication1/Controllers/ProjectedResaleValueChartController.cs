@@ -60,20 +60,17 @@ namespace WebApplication1.Controllers
             return View(projectedResaleValueChart);
         }
 
-        //GET: ProjectedResaleValueChart/Details/5
-        //public ActionResult GenerateResaleValue(int id)
-        //{
-            
-        //}
 
 
 
-
-        // GET: ProjectedResaleValueChart/Create
+        
         public ActionResult Create()
         {
             return View();
         }
+
+
+
 
         // POST: ProjectedResaleValueChart/Create
         [HttpPost]
@@ -92,11 +89,15 @@ namespace WebApplication1.Controllers
             }
         }
 
+
+
         // GET: ProjectedResaleValueChart/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
+
+
 
         // POST: ProjectedResaleValueChart/Edit/5
         [HttpPost]
